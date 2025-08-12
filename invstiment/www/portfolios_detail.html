@@ -1,0 +1,84 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<div class="container py-6">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h2>تفاصيل المحفظة: {{ portfolio.title }}</h2>
+      <div class="text-muted">العملة: {{ portfolio.currency }}</div>
+    </div>
+    <div class="d-flex gap-2">
+      <a class="btn btn-outline-secondary" href="{{ portfolio.cash_mgmt_link }}">إدارة النقد</a>
+      <a class="btn btn-primary" href="{{ portfolio.new_plan_link }}">+ إنشاء خطة</a>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="mb-2">رصيد النقد: <strong>{{ portfolio.cash_balance | format_currency(portfolio.currency) }}</strong></div>
+          <div class="mb-2">قيمة الأوراق المالية: <strong>{{ portfolio.securities_balance | format_currency(portfolio.currency) }}</strong></div>
+          <div class="mb-0">الإجمالي: <strong>{{ portfolio.total | format_currency(portfolio.currency) }}</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="mb-3">أحدث الصفقات</h5>
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>التاريخ</th>
+                  <th>الخطة</th>
+                  <th>النوع</th>
+                  <th>الكمية</th>
+                  <th>السعر</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for t in trades %}
+                <tr>
+                  <td>{{ t.posting_date }}</td>
+                  <td><a href="/app/portfolio-plan/{{ t.plan }}">{{ t.plan }}</a></td>
+                  <td>{{ t.trade_type }}</td>
+                  <td>{{ t.qty }}</td>
+                  <td>{{ t.price | format_currency(portfolio.currency) }}</td>
+                </tr>
+                {% else %}
+                <tr><td colspan="5" class="text-center text-muted">لا توجد صفقات بعد</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h5 class="mb-3">الخطط</h5>
+    <div class="row g-3">
+      {% for pl in plans %}
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="mb-0">{{ pl.symbol }}</h6>
+              <a class="small" href="{{ pl.room_link }}">فتح</a>
+            </div>
+            <hr/>
+            <div>القيمة العادلة: <strong>{{ pl.fair_value | format_currency(portfolio.currency) }}</strong></div>
+            <div>أقل سعر: <strong>{{ pl.lowest_price | format_currency(portfolio.currency) }}</strong></div>
+            <div>مبلغ الاستثمار: <strong>{{ pl.investment_amount | format_currency(portfolio.currency) }}</strong></div>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div class="text-muted">لا توجد خطط بعد</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

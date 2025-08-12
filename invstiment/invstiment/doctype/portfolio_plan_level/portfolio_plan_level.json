@@ -1,0 +1,20 @@
+{
+ "doctype": "DocType",
+ "name": "Portfolio Plan Level",
+ "module": "Invstiment",
+ "custom": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "track_changes": 0,
+ "field_order": [
+  "level_no",
+  "price",
+  "cash_share"
+ ],
+ "fields": [
+  {"fieldname": "level_no", "label": "المستوى", "fieldtype": "Int", "in_list_view": 1},
+  {"fieldname": "price", "label": "السعر", "fieldtype": "Currency", "in_list_view": 1},
+  {"fieldname": "cash_share", "label": "الحصة النقدية", "fieldtype": "Currency", "in_list_view": 1}
+ ],
+ "permissions": []
+}

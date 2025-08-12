@@ -1,0 +1,31 @@
+{
+ "doctype": "DocType",
+ "name": "Portfolio Plan",
+ "module": "Invstiment",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "autoname": "PLAN-.#####",
+ "field_order": [
+  "portfolio",
+  "symbol",
+  "fair_value",
+  "lowest_price",
+  "investment_amount",
+  "division_factor",
+  "levels"
+ ],
+ "fields": [
+    {"fieldname": "portfolio", "label": "المحفظة", "fieldtype": "Link", "options": "Portfolio", "reqd": 1, "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "symbol", "label": "الرمز/السهم", "fieldtype": "Data", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "fair_value", "label": "القيمة العادلة", "fieldtype": "Currency", "reqd": 1},
+  {"fieldname": "lowest_price", "label": "أقل سعر", "fieldtype": "Currency", "reqd": 1},
+  {"fieldname": "investment_amount", "label": "مبلغ الاستثمار", "fieldtype": "Currency", "reqd": 1},
+  {"fieldname": "division_factor", "label": "معامل تقسيم الرصيد", "fieldtype": "Int", "reqd": 1, "default": 20},
+  {"fieldname": "levels", "label": "المستويات النظرية", "fieldtype": "Table", "options": "Portfolio Plan Level"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
+ ]
+}

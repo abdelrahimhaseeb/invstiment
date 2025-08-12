@@ -1,0 +1,31 @@
+{
+  "label": "الاستثمار",
+  "icon": "octicon octicon-graph",
+  "type": "module",
+  "links": [
+    {
+      "type": "doctype",
+      "label": "Portfolio",
+      "name": "Portfolio",
+      "onboard": 1
+    },
+    {
+      "type": "doctype",
+      "label": "Portfolio Plan",
+      "name": "Portfolio Plan",
+      "onboard": 1
+    },
+    {
+      "type": "doctype",
+      "label": "Portfolio Trade",
+      "name": "Portfolio Trade",
+      "onboard": 1
+    },
+    {
+      "type": "doctype",
+      "label": "Portfolio Cash Movement",
+      "name": "Portfolio Cash Movement",
+      "onboard": 1
+    }
+  ]
+}

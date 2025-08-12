@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.mypy_cache/
+.pytest_cache/
+.coverage*
+htmlcov/
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+ENV/
+env/
+
+# Node / Frontend
+node_modules/
+yarn-error.log
+npm-debug.log*
+
+# Frappe/Assets
+public/dist/
+assets/
+*.min.js
+*.map
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Bench/Local
+*.log
+bench.log

@@ -1,0 +1,25 @@
+{
+ "doctype": "DocType",
+ "name": "Portfolio Cash Movement",
+ "module": "Invstiment",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "autoname": "PCM-.#####",
+ "field_order": [
+  "portfolio",
+  "posting_date",
+  "movement_type",
+  "amount"
+ ],
+ "fields": [
+  {"fieldname": "portfolio", "label": "المحفظة", "fieldtype": "Link", "options": "Portfolio", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "posting_date", "label": "التاريخ", "fieldtype": "Date", "reqd": 1, "default": "Today", "in_list_view": 1},
+  {"fieldname": "movement_type", "label": "النوع", "fieldtype": "Select", "options": "إيداع\nسحب", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "amount", "label": "المبلغ", "fieldtype": "Currency", "reqd": 1, "in_list_view": 1, "options": "currency"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
+ ]
+}

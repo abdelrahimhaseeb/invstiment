@@ -1,0 +1,27 @@
+{
+ "doctype": "DocType",
+ "name": "Portfolio",
+ "module": "Invstiment",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "allow_rename": 1,
+ "allow_import": 1,
+ "autoname": "PORT-.#####",
+ "field_order": [
+  "portfolio_name",
+  "currency",
+  "cash_account",
+  "securities_account"
+ ],
+ "fields": [
+  {"fieldname": "portfolio_name", "label": "اسم المحفظة", "fieldtype": "Data", "reqd": 1, "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "currency", "label": "العملة", "fieldtype": "Link", "options": "Currency", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "cash_account", "label": "حساب النقد", "fieldtype": "Link", "options": "Account", "read_only": 1},
+  {"fieldname": "securities_account", "label": "حساب الأوراق المالية", "fieldtype": "Link", "options": "Account", "read_only": 1}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
+ ]
+}

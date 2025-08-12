@@ -1,0 +1,64 @@
+{
+  "doctype": "Workspace",
+  "name": "investment",
+  "label": "الاستثمار",
+  "title": "الاستثمار",
+  "module": "Invstiment",
+  "icon": "briefcase",
+  "public": 1,
+  "is_hidden": 0,
+  "sequence_id": 1,
+  "content": "[\n    {\"id\": \"hdr1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>المحافظ والاستثمار</b></span>\", \"col\": 12}},\n    {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}\n]",
+  "shortcuts": [
+    { "label": "المحافظ", "link_to": "Portfolio", "type": "DocType" },
+    { "label": "الخطط", "link_to": "Portfolio Plan", "type": "DocType" },
+    { "label": "الصفقات", "link_to": "Portfolio Trade", "type": "DocType" },
+    { "label": "حركات نقدية", "link_to": "Portfolio Cash Movement", "type": "DocType" }
+  ],
+  "links": [
+    {
+      "label": "نظرة عامة على المحافظ",
+      "type": "Link",
+      "link_type": "Route",
+      "link_to": "portfolios",
+      "hidden": 0,
+      "onboard": 0
+    },
+    {
+      "label": "محافظ الاستثمار",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Portfolio",
+      "hidden": 0,
+      "onboard": 0
+    },
+    {
+      "label": "خطط الاستثمار",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Portfolio Plan",
+      "hidden": 0,
+      "onboard": 0
+    },
+    {
+      "label": "صفقات الاستثمار",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Portfolio Trade",
+      "hidden": 0,
+      "onboard": 0
+    },
+    {
+      "label": "حركات نقدية",
+      "type": "Link",
+      "link_type": "DocType",
+      "link_to": "Portfolio Cash Movement",
+      "hidden": 0,
+      "onboard": 0
+    }
+  ],
+  "charts": [],
+  "number_cards": [],
+  "quick_lists": [],
+  "roles": []
+}
