@@ -25,8 +25,17 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/invstiment/css/invstiment.css"
-# app_include_js = "/assets/invstiment/js/invstiment.js"
+app_include_css = [
+    "/assets/invstiment/css/hub.css",
+]
+app_include_js = [
+    # Redirect Desk landing to the Workspaces Hub
+    "/assets/invstiment/js/startup.js",
+    # Toolbar quick access to the Hub
+    "/assets/invstiment/js/toolbar_hub_button.js",
+    # Fullscreen overlay fallback for the Hub
+    "/assets/invstiment/js/hub_overlay.js",
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/invstiment/css/invstiment.css"

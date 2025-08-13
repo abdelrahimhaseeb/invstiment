@@ -1,0 +1,9 @@
+{
+  "doctype": "Page",
+  "name": "workspaces-hub",
+  "title": "مساحات العمل",
+  "module": "Invstiment",
+  "standard": 1,
+  "system_page": 0,
+  "developer_mode_only": 0
+}
